@@ -32,8 +32,8 @@
                 <div class="row">
                     <div class="col-lg-7">
                         <div class="float-left">
-                            <p>Phone: +01 256 25 235</p>
-                            <p>email: info@eiser.com</p>
+                            <p>Phone: +91 8469341176</p>
+                            <p>email: rathorepriyanshu143@gmail.com</p>
                         </div>
                     </div>
                     <div class="col-lg-5">
@@ -89,9 +89,7 @@
                                             <li class="nav-item">
                                                 <a class="nav-link" href="{% url 'category' %}">Shop Category</a>
                                             </li>
-                                            <li class="nav-item">
-                                                <a class="nav-link" href="{% url 'cart' %}">Shopping Cart</a>
-                                            </li>
+
                                         </ul>
                                     </li>
                                     <li class="nav-item submenu dropdown">
@@ -103,12 +101,12 @@
                                                 <a class="nav-link" href="{% url 'myorder' %}">My Order</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="{% url 'wishlist' %}">Wishlist
-                                                    ({{request.session.wishlist_count}})</a>
+                                                <a class="nav-link"
+                                                    href="{% url 'wishlist' %}">Wishlist({{request.session.wishlist_count}})</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link" href="{% url 'cart' %}">Cart
-                                                    ({{request.session.cart_count}})</a>
+                                                <a class="nav-link"
+                                                    href="{% url 'cart' %}">cart({{request.session.cart_count}})</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link" href="{% url 'change-password' %}">Change
@@ -130,14 +128,15 @@
 
                                         </ul>
                                     </li>
+
                                     <li class="nav-item">
-                                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                                        <a class="nav-link" href="{% url 'contact'%}">Contact</a>
                                     </li>
                                     {% if request.session.profile_picture %}
                                     <li class="nav-item">
                                         <a class="nav-link" href="{% url 'profile' %}">
                                             <img src="{{request.session.profile_picture}}"
-                                                style="width: 50px; height: 50px; border-radius: 50%;">
+                                                style="width: 50px;height: 50px; border-radius: 50%;" />
                                         </a>
                                     </li>
                                     {% endif %}
@@ -247,7 +246,7 @@
                     Copyright &copy;
                     <script>document.write(new Date().getFullYear());</script> All rights reserved | This template is
                     made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com"
-                        target="_blank">Dhvanit</a>
+                        target="_blank">Colorlib</a>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 </p>
                 <div class="col-lg-4 col-md-12 footer-social">
@@ -263,20 +262,20 @@
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/stellar.js"></script>
-    <script src="vendors/lightbox/simpleLightbox.min.js"></script>
-    <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-    <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
-    <script src="vendors/isotope/isotope-min.js"></script>
-    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="vendors/counter-up/jquery.waypoints.min.js"></script>
-    <script src="vendors/counter-up/jquery.counterup.js"></script>
-    <script src="js/mail-script.js"></script>
-    <script src="js/theme.js"></script>
+    <script src="{% static 'js/jquery-3.2.1.min.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/stellar.js' %}"></script>
+    <script src="{% static 'vendors/lightbox/simpleLightbox.min.js' %}"></script>
+    <script src="{% static 'vendors/nice-select/js/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'vendors/isotope/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'vendors/isotope/isotope-min.js' %}"></script>
+    <script src="{% static 'vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'vendors/counter-up/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'vendors/counter-up/jquery.counterup.js' %}"></script>
+    <script src="{% static 'js/mail-script.js' %}"></script>
+    <script src="{% static 'js/theme.js' %}"></script>
 </body>
 
 </html>
